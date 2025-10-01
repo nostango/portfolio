@@ -29,9 +29,9 @@ export function DotSpiral() {
 
       const spiralCenterX = canvas.width / 2;
       const spiralCenterY = canvas.height / 2;
-      const maxRotations = 5;
+      const maxRotations = 3;
       const maxRadius = Math.min(canvas.width, canvas.height) * 0.4;
-      const dotsPerRotation = 20;
+      const dotsPerRotation = 10;
       const totalDots = Math.floor(
         scrollProgress * maxRotations * dotsPerRotation
       );

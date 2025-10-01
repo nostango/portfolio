@@ -1,14 +1,18 @@
-import ScrollReveal from '@/components/scroll-reveal';
-import StickySection from '@/components/sticky-section';
-import TransparentHeader from "@/components/transparent-header"
-import { DotSpiral } from '@/components/dot-spiral'
-import { ScrollBubble } from '@/components/scroll-bubble';
+import ScrollReveal from '@/components/scroll-behavior/scroll-reveal';
+import StickySection from '@/components/scroll-behavior/sticky-section';
+import TransparentHeader from "@/components/ui/transparent-header"
+import { DotSpiral } from '@/components/scroll-behavior/dot-spiral'
+import { ScrollBubble } from '@/components/scroll-behavior/scroll-bubble';
 
 export default function Home() {
   return (
     <main>
       {/* TODO: Here is how I would break down the website, thinking about each stickysection:
-        1) The introduction or landing page that essentially just says Hello, I am Ale and I am a Full-Stack and AI Engineer that likes to build */}
+        1) The introduction or landing page that essentially just says Hello, I am Ale and I am a Full-Stack and AI Engineer that likes to build
+        2) Technologies I like to use and have experience with
+        3) Work Experience with the technology attached to it
+        4) Demo space
+        5) How to get in touch (the final slide where the logo is there and then all the buttons for github, ) */}
       <DotSpiral></DotSpiral>
       <ScrollBubble></ScrollBubble>
       <StickySection className="text-white flex items-center justify-center">
