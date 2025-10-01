@@ -1,10 +1,16 @@
-import ScrollReveal from '@/components/ScrollReveal';
-import StickySection from '@/components/StickySection';
+import ScrollReveal from '@/components/scroll-reveal';
+import StickySection from '@/components/sticky-section';
+import TransparentHeader from "@/components/transparent-header"
+import { DotSpiral } from '@/components/dot-spiral'
+import { ScrollBubble } from '@/components/scroll-bubble';
 
 export default function Home() {
   return (
     <main>
-      <StickySection className="bg-black text-white flex items-center justify-center">
+      <DotSpiral></DotSpiral>
+      <ScrollBubble></ScrollBubble>
+      <StickySection className="text-white flex items-center justify-center">
+        <TransparentHeader></TransparentHeader>
         <div className="text-center">
           <ScrollReveal>
             <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
@@ -15,7 +21,7 @@ export default function Home() {
         </div>
       </StickySection>
 
-      <StickySection className="bg-gray-800 text-white flex items-center justify-center">
+      <StickySection className="text-white flex items-center justify-center">
         <div className="text-center">
           <ScrollReveal>
             <h2 className="text-4xl font-bold">Project 1</h2>
@@ -29,7 +35,7 @@ export default function Home() {
         </div>
       </StickySection>
 
-      <StickySection className="bg-gray-900 text-white flex items-center justify-center">
+      <StickySection className=" text-white flex items-center justify-center">
         <div className="text-center">
           <ScrollReveal>
             <h2 className="text-4xl font-bold">About Me</h2>
@@ -43,5 +49,5 @@ export default function Home() {
         </div>
       </StickySection>
     </main>
-  );
+  )
 }
