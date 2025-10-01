@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nostango Portfolio",
-  description: "Nostango notable works",
+  description: "who is nostango?",
 };
 
 export default function RootLayout({

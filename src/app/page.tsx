@@ -7,6 +7,8 @@ import { ScrollBubble } from '@/components/scroll-bubble';
 export default function Home() {
   return (
     <main>
+      {/* TODO: Here is how I would break down the website, thinking about each stickysection:
+        1) The introduction or landing page that essentially just says Hello, I am Ale and I am a Full-Stack and AI Engineer that likes to build */}
       <DotSpiral></DotSpiral>
       <ScrollBubble></ScrollBubble>
       <StickySection className="text-white flex items-center justify-center">

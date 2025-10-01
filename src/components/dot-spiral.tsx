@@ -50,7 +50,7 @@ export function DotSpiral() {
         });
       }
 
-      // --- Draw the connecting line ---
+      // Draw the connecting line
       if (coordinates.length > 1) {
         ctx.beginPath();
         ctx.moveTo(coordinates[0].x, coordinates[0].y);
