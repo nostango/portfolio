@@ -14,7 +14,7 @@ export default function StickySection({
   const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={ref} className="h-[200vh]">
+    <div ref={ref} className="h-[150vh]">
       <div className={`sticky top-0 h-screen ${className}`}>
         {children}
       </div>

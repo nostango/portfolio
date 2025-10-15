@@ -14,7 +14,7 @@ export function ScrollBubble() {
 
       // TODO: Change the behavior such that it goes slower as time goes on
       // Animate bubble in circular path
-      const angle = scrollProgress * Math.PI * 4 // 2 full circles
+      const angle = scrollProgress * Math.PI * 2
       const radius = 150
       const centerX = window.innerWidth / 2
       const centerY = window.innerHeight / 2
@@ -37,7 +37,7 @@ export function ScrollBubble() {
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
       <div
         ref={bubbleRef}
-        className="absolute w-[200px] h-[200px] rounded-full bg-[var(--color-primary)]/30 blur-3xl"
+        className="absolute w-[400px] h-[400px] rounded-full bg-[var(--color-primary)]/30 blur-3xl"
         style={{ willChange: "transform" }}
       />
     </div>

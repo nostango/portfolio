@@ -11,7 +11,7 @@ export default function TransparentHeader() {
             <div className="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
 
             {/* Button text */}
-            <span className="relative z-10">Hit me up</span>
+            <span className="relative z-10">Get in touch</span>
           </button>
         </div>
       </div>
