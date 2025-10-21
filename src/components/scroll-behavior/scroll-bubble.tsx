@@ -34,7 +34,7 @@ export function ScrollBubble() {
   }, [])
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
       <div
         ref={bubbleRef}
         className="absolute w-[400px] h-[400px] rounded-full bg-[var(--color-primary)]/30 blur-3xl"
