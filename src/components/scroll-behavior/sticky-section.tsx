@@ -15,7 +15,7 @@ export default function StickySection({
 
   return (
     <div ref={ref} className="h-[150vh]">
-      <div className={`sticky top-0 h-screen ${className}`}>
+      <div className={`sticky top-[40px] h-screen flex items-center justify-center z-10 ${className}`}>
         {children}
       </div>
     </div>

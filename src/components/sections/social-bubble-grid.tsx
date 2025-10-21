@@ -33,7 +33,7 @@ export default function SocialBubbleGrid() {
     }
 
     return (
-        <div className="min-h-screen flex flex-col justify-center w-full max-w-2xl mx-auto p-8 pt-20">
+        <div className="min-h-screen flex flex-col justify-center w-full max-w-2xl mx-auto p-8 pt-20 z-10">
         <div className="flex flex-col items-center gap-6">
             {/* Logo */}
             <div className="w-80 h-80 relative">
