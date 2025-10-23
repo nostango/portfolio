@@ -39,20 +39,20 @@ const defaultExperiences: Experience[] = [
         id: "2",
         company: "Oxbridge Health Inc.",
         role: "Large Language Model Engineer",
-        period: "January 2024 – July 2025",
+        period: "January 2024 - July 2025",
         description:
         "Developing LLM-driven applications to streamline healthcare episode management and member support utilizing AWS Bedrock, embeddings, and NLP pipelines to optimize knowledge retrieval and contextual understanding",
         technologies: ["AWS Bedrock", "LLMs", "Streamlit", "AWS S3", "Graph Neural Networks", "NeptuneDB", "DynamoDB", "PostgreSQL"],
         achievements: [
         "Synthetic Claims Generator: Engineered a rule-verified system to produce structured medical claim data using LLMs and embeddings",
         "Document Generation App: Created a Streamlit-based tool using LLM-powered analysis and AWS S3 to automate contract and form generation that matches existing company cadence and language",
-        "Knowledge Graph R&D: Initiated and led a healthcare episode prediction project after independently researching and pitching the concept to the CTO in response to a founder’s question. Brought in a clinical leader to join the team and earned direct recognition from the founder for driving collaboration between clinical and engineering teams on data-driven episode-of-care insights using Graph Neural Networks and NeptuneDB.",
+        "Knowledge Graph R&D: Initiated and led a healthcare episode prediction project after independently researching and pitching the concept to the CTO in response to a founder's question. Brought in a clinical leader to join the team and earned direct recognition from the founder for driving collaboration between clinical and engineering teams on data-driven episode-of-care insights using Graph Neural Networks and NeptuneDB.",
         ],
         previewImage: "/images/experience-images/oxb_health.png",
     },
     {
         id: "3",
-        company: "Teaching Assistant Program in France; Collège International de l’Est Parisien",
+        company: "Teaching Assistant Program in France; Collège International de l'Est Parisien",
         role: "English Teaching Assistant",
         period: "September 2022 - May 2023",
         description:
