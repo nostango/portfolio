@@ -41,7 +41,7 @@ export default function SocialBubbleGrid() {
             </div>
 
             {/* Name */}
-            <h1 className="text-2xl font-bold text-foreground text-center">nostango</h1>
+            <h1 className="text-2xl font-bold text-foreground text-center">Ways to get in touch with me</h1>
 
             {firstHalfRows.map((row, rowIndex) => (
             <div key={`first-row-${rowIndex}`} className="flex gap-6 justify-center">
