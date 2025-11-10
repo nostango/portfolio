@@ -7,6 +7,7 @@ import {
   useSpring,
 } from 'motion/react';
 import { cn } from '@/lib/utils';
+
 type BubbleBackgroundProps = React.ComponentProps<'div'> & {
   interactive?: boolean;
   transition?: SpringOptions;
@@ -19,22 +20,28 @@ type BubbleBackgroundProps = React.ComponentProps<'div'> & {
     sixth: string;
   };
 };
-export default function BubbleBackground({
-  ref,
-  className,
-  children,
-  interactive = false,
-  transition = { stiffness: 100, damping: 20 },
-  colors = {
-    first: '18,113,255',
-    second: '221,74,255',
-    third: '0,220,255',
-    fourth: '200,50,50',
-    fifth: '180,180,50',
-    sixth: '140,100,255',
+
+const BubbleBackground = React.forwardRef<
+  HTMLDivElement,
+  Omit<BubbleBackgroundProps, 'ref'>
+>(function BubbleBackground(
+  {
+    className,
+    children,
+    interactive = false,
+    transition = { stiffness: 100, damping: 20 },
+    colors = {
+      first: '18,113,255',
+      second: '221,74,255',
+      third: '0,220,255',
+      fourth: '200,50,50',
+      fifth: '180,180,50',
+      sixth: '140,100,255',
+    },
+    ...props
   },
-  ...props
-}: BubbleBackgroundProps) {
+  ref,
+) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   React.useImperativeHandle(ref, () => containerRef.current as HTMLDivElement);
   const mouseX = useMotionValue(0);
@@ -152,4 +159,5 @@ export default function BubbleBackground({
       {children}
     </div>
   );
-}
+});
+export default BubbleBackground;
