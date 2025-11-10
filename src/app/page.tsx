@@ -1,14 +1,25 @@
+import BubbleBackground from '@/components/sections/bubble-background';
 import ScrollReveal from '@/components/scroll-behavior/scroll-reveal';
 import StickySection from '@/components/scroll-behavior/sticky-section';
 import TransparentHeader from "@/components/sections/transparent-header"
-import { ScrollBubble } from '@/components/scroll-behavior/scroll-bubble';
 import SocialBubbleGrid from '@/components/sections/social-bubble-grid';
 import { WorkExperience } from "@/components/sections/work-experience";
+import { IntroSection } from "@/components/sections/intro-section"
 
 export default function Home() {
   return (
         <main>
-          <TransparentHeader />
+          <BubbleBackground
+            interactive
+            colors={{
+              first: '115, 82, 144', // --background
+              second: '215, 182, 244', // --card
+              third: '54, 52, 87', // --background
+              fourth: '158, 183, 229', // --card
+              fifth: '152, 168, 134', // --background
+              sixth: '152, 168, 134', // --card
+            }}
+          ></BubbleBackground>
           {/* TODO: Here is how I would break down the website, thinking about each stickysection:
             1) The introduction or landing page that essentially just says Hello, I am Ale and I am a Full-Stack and AI Engineer that likes to build
             2) Technologies I like to use and have experience with
@@ -16,41 +27,12 @@ export default function Home() {
             4) Demo space
             5) How to get in touch (the final slide where the logo is there and then all the buttons for github, ) */}
           {/*<DotSpiral></DotSpiral>*/}
-          <ScrollBubble></ScrollBubble>
           <StickySection className="text-white flex items-center justify-center">
-            <div className="text-center">
-              <ScrollReveal>
-                <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
-              </ScrollReveal>
-              <ScrollReveal>
-                <p className="mt-4 text-xl">Scroll down to see my work</p>
-              </ScrollReveal>
-            </div>
-          </StickySection>
-    
-          <StickySection className="text-white flex items-center justify-center">
-            <div className="text-center">
-              <ScrollReveal>
-                <h2 className="text-4xl font-bold">Work Experience</h2>
-              </ScrollReveal>
-            </div>
+            <TransparentHeader />
+            <IntroSection />
           </StickySection>
     
           <WorkExperience></WorkExperience>
-    
-          <StickySection className=" text-white flex items-center justify-center">
-            <div className="text-center">
-              <ScrollReveal>
-                <h2 className="text-4xl font-bold">About Me</h2>
-              </ScrollReveal>
-              <ScrollReveal>
-                <p className="mt-4 max-w-2xl">
-                  I am a passionate developer with a love for creating beautiful and
-                  functional web applications.
-                </p>
-              </ScrollReveal>
-            </div>
-          </StickySection>
     
           <StickySection className="bg-transparent items-center">
             <ScrollReveal>
