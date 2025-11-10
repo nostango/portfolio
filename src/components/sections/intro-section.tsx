@@ -1,9 +1,9 @@
 export function IntroSection() {
 return (
-    <section className="min-h-screen flex items-center justify-center px-60 py-12">
+    <section className="min-h-screen flex items-center justify-center px-4 py-12 md:px-60">
     <div className="w-full max-w-6xl">
         {/* 2x3 Grid Layout */}
-        <div className="grid grid-cols-2 gap-8 md:gap-12 items-start">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 items-start">
         {/* Row 1, Col 1: Name Introduction */}
         <div className="flex items-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
