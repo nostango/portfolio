@@ -26,11 +26,11 @@ const LinkButton: React.FC<LinkButtonProps> = ({ href, label }) => {
       title={label}
       className="
         flex items-center justify-center
-        w-12 h-12 bg-gray-800 bg-opacity-50
+        w-12 h-12 bg-[hsl(var(--secondary))]
         rounded-full
         transition-all duration-300
-        hover:bg-gray-700 hover:scale-110 hover:shadow-lg
-        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
+        hover:bg-[hsl(var(--muted))] hover:scale-110 hover:shadow-lg
+        focus:outline-none focus:ring-2 focus:ring-[hsl(var(--ring))]
       "
     >
       <img
