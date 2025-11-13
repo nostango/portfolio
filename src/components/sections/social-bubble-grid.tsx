@@ -41,7 +41,7 @@ export default function SocialBubbleGrid() {
             </div>
 
             {/* Name */}
-            <h1 className="text-2xl font-bold text-foreground text-center">Ways to get in touch with me</h1>
+            <h1 className="text-2xl font-bold text-[hsl(var(--foreground))] text-center">Ways to get in touch with me</h1>
 
             {firstHalfRows.map((row, rowIndex) => (
             <div key={`first-row-${rowIndex}`} className="flex gap-6 justify-center">
@@ -52,7 +52,7 @@ export default function SocialBubbleGrid() {
             ))}
 
             {/* Text */}
-            <p className="text-sm text-muted-foreground text-center mt-2">Some other things I'm involved in:</p>
+            <p className="text-sm text-[hsl(var(--muted-foreground))] text-center mt-2">Some other things I'm involved in:</p>
 
             {secondHalfRows.map((row, rowIndex) => (
             <div key={`second-row-${rowIndex}`} className="flex gap-6 justify-center">
