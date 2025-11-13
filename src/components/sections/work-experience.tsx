@@ -22,14 +22,14 @@ interface WorkExperienceProps {
 const defaultExperiences: Experience[] = [
     {
         id: "1",
-        company: "Independent",
-        role: "Freelance Developer",
-        period: "August 2023 – Present",
+        company: "Valenzuela Hawaiian Kenpo",
+        role: "Full-Stack Developer",
+        period: "August 2023 - Present",
         description:
         "Built and deployed custom web and automation solutions for small businesses using cloud-native infrastructure and modern frameworks.",
         technologies: ["Next.js", "AWS Lambda", "AWS DynamoDB", "Twilio", "GitHub Actions", "SonarCloud", "Google Apps Script"],
         achievements: [
-        "Karate School Website: Built and maintained a Next.js website that syncs class schedules from Google Calendar using Google Apps Script and AWS Lambda. Integrated AWS DynamoDB as a backup cache layer to ensure reliability during Google service interruptions. Deployed via AWS Amplify with CI/CD through GitHub, managing test and production branches",
+        "Built and maintained a Next.js website that syncs class schedules from Google Calendar using Google Apps Script and AWS Lambda. Integrated AWS DynamoDB as a backup cache layer to ensure reliability during Google service interruptions. Deployed via AWS Amplify with CI/CD through GitHub, managing test and production branches",
         "Client Messaging System: Created a group SMS platform with AWS Lambda, Twilio, and API Gateway for streamlined outreach",
         "CI/CD Automation: Integrated SonarCloud with GitHub Actions for continuous deployment on AWS Lambda-hosted applications",
         ],

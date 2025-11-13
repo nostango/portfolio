@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 
 export function GridBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
+  const isDirty = useRef(true) // Flag to indicate if a redraw is needed
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -12,20 +13,8 @@ export function GridBackground() {
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Set canvas size
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
-    resizeCanvas()
-    window.addEventListener("resize", resizeCanvas)
-
     let scrollOffset = 0
-
-    const handleScroll = () => {
-      scrollOffset = window.scrollY * 0.5 // Adjust speed multiplier
-    }
-    window.addEventListener("scroll", handleScroll)
+    let animationFrameId: number
 
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -95,17 +84,42 @@ export function GridBackground() {
         ctx.lineTo(endX, endYBottom)
         ctx.stroke()
       }
-
-      requestAnimationFrame(draw)
+      isDirty.current = false // Reset dirty flag after drawing
     }
 
-    draw()
+    // Set canvas size
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+      isDirty.current = true // Mark for redraw
+    }
+    resizeCanvas()
+    window.addEventListener("resize", resizeCanvas)
+
+    const handleScroll = () => {
+      const newScrollOffset = window.scrollY * 0.5 // Adjust speed multiplier
+      if (newScrollOffset !== scrollOffset) {
+        scrollOffset = newScrollOffset
+        isDirty.current = true // Mark for redraw
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+
+    const renderLoop = () => {
+      if (isDirty.current) {
+        draw()
+      }
+      animationFrameId = requestAnimationFrame(renderLoop)
+    }
+
+    animationFrameId = requestAnimationFrame(renderLoop) // Start the render loop
 
     return () => {
       window.removeEventListener("resize", resizeCanvas)
       window.removeEventListener("scroll", handleScroll)
+      cancelAnimationFrame(animationFrameId) // Clean up animation frame
     }
-  }, [])
+  }, [isDirty])
 
   return <canvas ref={canvasRef} className="fixed inset-0 -z-10 pointer-events-none" />
 }

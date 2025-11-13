@@ -1,100 +1,63 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  --color-primary: #735290;
-  --color-primary-light: #d7b6f4;
-  --color-secondary: #363457;
+  --background: 0 0% 0%;
+  --foreground: 220 59% 76%;
+
+  --card: 276 29% 20%;
+  --card-foreground: 220 59% 76%;
+ 
+  --popover: 276 29% 20%;
+  --popover-foreground: 220 59% 76%;
+ 
+  --primary: 81 16% 59%;
+  --primary-foreground: 244 23% 12%;
+ 
+  --secondary: 206 21% 34%;
+  --secondary-foreground: 220 59% 76%;
+ 
+  --muted: 206 21% 34%;
+  --muted-foreground: 220 59% 76%;
+ 
+  --accent: 81 16% 59%;
+  --accent-foreground: 244 23% 12%;
+ 
+  --destructive: 0 100% 71%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 206 21% 34%;
+  --input: 276 29% 20%;
+  --ring: 81 16% 59%;
+ 
   --radius: 0.625rem;
-
-  --background: #000000;
-  --foreground: #9EB7E5;
-
-  --card: #342541;
-  --card-foreground: #9EB7E5;
-
-  --popover: #342541;
-  --popover-foreground: #9EB7E5;
-
-  --primary: #98A886;
-  --primary-foreground: #181726;
-
-  --secondary: #465C69;
-  --secondary-foreground: #9EB7E5;
-
-  --muted: #465C69;
-  --muted-foreground: #9EB7E5;
-
-  --accent: #98A886;
-  --accent-foreground: #181726;
-
-  --destructive: #FF6B6B;
-
-  --border: #465C69;
-  --input: #342541;
-  --ring: #98A886;
-
-  --chart-1: #98A886;
-  --chart-2: #9EB7E5;
-  --chart-3: #465C69;
-  --chart-4: #342541;
-  --chart-5: #181726;
-
-  --sidebar: #181726;
-  --sidebar-foreground: #9EB7E5;
-  --sidebar-primary: #98A886;
-  --sidebar-primary-foreground: #181726;
-  --sidebar-accent: #465C69;
-  --sidebar-accent-foreground: #9EB7E5;
-  --sidebar-border: #465C69;
-  --sidebar-ring: #98A886;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Original custom colors */
+  --color-primary: 275 26% 44%;
+  --color-primary-light: 274 76% 84%;
+  --color-secondary: 244 23% 28%;
+
+  /* New 5-color palette */
+  --custom-primary: 275 36% 52%;   /* Royal Purple */
+  --custom-secondary: 206 69% 62%;  /* Lighter Blue */
+  --custom-third: 207 44% 49%;      /* Metal Blue */
+  --custom-fourth: 160 100% 75%;     /* Lighter Green */
+  --custom-fifth: 45 66% 66%;       /* Pastel Gold */
+
+  --bubble-1: 275 26% 44%;
+  --bubble-2: 274 76% 84%;
+  --bubble-3: 244 23% 27%;
+  --bubble-4: 220 59% 76%;
+  --bubble-5: 81 16% 59%;
+  --bubble-6: 81 16% 59%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-geist-sans);
 }
-
