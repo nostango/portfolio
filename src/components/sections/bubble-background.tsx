@@ -61,7 +61,7 @@ const BubbleBackground = React.forwardRef<
         className="absolute inset-0"
       >
         <motion.div
-          className="absolute rounded-full size-[80%] top-[10%] left-[10%] bg-[radial-gradient(circle_at_center,rgba(var(--bubble-1),0.3)_0%,rgba(var(--bubble-1),0)_50%)]"
+          className="absolute rounded-full size-[80%] top-[10%] left-[10%] bg-[radial-gradient(circle_at_center,hsl(var(--bubble-1)/0.3)_0%,hsl(var(--bubble-1)/0)_50%)]"
           style={{ filter: 'blur(40px)' }}
           animate={{ y: [-50, 50, -50] }}
           transition={{ duration: 30, ease: 'easeInOut', repeat: Infinity }}
@@ -77,7 +77,7 @@ const BubbleBackground = React.forwardRef<
           }}
         >
           <div
-            className="rounded-full size-[80%] top-[10%] left-[10%] bg-[radial-gradient(circle_at_center,rgba(var(--bubble-2),0.3)_0%,rgba(var(--bubble-2),0)_50%)]"
+            className="rounded-full size-[80%] top-[10%] left-[10%] bg-[radial-gradient(circle_at_center,hsl(var(--bubble-2)/0.3)_0%,hsl(var(--bubble-2)/0)_50%)]"
             style={{ filter: 'blur(40px)' }}
           />
         </motion.div>
@@ -87,12 +87,12 @@ const BubbleBackground = React.forwardRef<
           transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
         >
           <div
-            className="absolute rounded-full size-[80%] bg-[radial-gradient(circle_at_center,rgba(var(--bubble-3),0.3)_0%,rgba(var(--bubble-3),0)_50%)] top-[calc(50%+200px)] left-[calc(50%-500px)]"
+            className="absolute rounded-full size-[80%] bg-[radial-gradient(circle_at_center,hsl(var(--bubble-3)/0.3)_0%,hsl(var(--bubble-3)/0)_50%)] top-[calc(50%+200px)] left-[calc(50%-500px)]"
             style={{ filter: 'blur(40px)' }}
           />
         </motion.div>
         <motion.div
-          className="absolute rounded-full size-[80%] top-[10%] left-[10%] bg-[radial-gradient(circle_at_center,rgba(var(--bubble-4),0.3)_0%,rgba(var(--bubble-4),0)_50%)] opacity-10"
+          className="absolute rounded-full size-[80%] top-[10%] left-[10%] bg-[radial-gradient(circle_at_center,hsl(var(--bubble-4)/0.3)_0%,hsl(var(--bubble-4)/0)_50%)] opacity-10"
           style={{ filter: 'blur(40px)' }}
           animate={{ x: [-50, 50, -50] }}
           transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity }}
@@ -103,13 +103,13 @@ const BubbleBackground = React.forwardRef<
           transition={{ duration: 20, ease: 'linear', repeat: Infinity }}
         >
           <div
-            className="absolute rounded-full size-[160%] bg-[radial-gradient(circle_at_center,rgba(var(--bubble-5),0.3)_0%,rgba(var(--bubble-5),0)_50%)] top-[calc(50%-80%)] left-[calc(50%-80%)]"
+            className="absolute rounded-full size-[160%] bg-[radial-gradient(circle_at_center,hsl(var(--bubble-5)/0.3)_0%,hsl(var(--bubble-5)/0)_50%)] top-[calc(50%-80%)] left-[calc(50%-80%)]"
             style={{ filter: 'blur(40px)' }}
           />
         </motion.div>
         {interactive && (
           <motion.div
-            className="absolute rounded-full size-full bg-[radial-gradient(circle_at_center,rgba(var(--bubble-6),0.3)_0%,rgba(var(--bubble-6),0)_50%)] opacity-10"
+            className="absolute rounded-full size-full bg-[radial-gradient(circle_at_center,hsl(var(--bubble-6)/0.3)_0%,hsl(var(--bubble-6)/0)_50%)] opacity-10"
             style={{
               x: springX,
               y: springY,

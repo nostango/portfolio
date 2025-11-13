@@ -25,7 +25,7 @@ export function ExperienceCard({ experience, index }: ExperienceCardProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Title Section */}
                 <div className="flex flex-col justify-start">
-                    <h3 className="text-2xl font-bold leading-tight text-[hsl(var(--foreground))]">{experience.role}</h3>
+                    <h3 className="text-2xl font-bold leading-tight text-[hsl(var(--custom-primary))]">{experience.role}</h3>
                     <p className="mt-1 text-lg text-[hsl(var(--muted-foreground))]">{experience.company}</p>
                     <span className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">{experience.period}</span>
                     {experience.website && (
@@ -33,7 +33,7 @@ export function ExperienceCard({ experience, index }: ExperienceCardProps) {
                         href={experience.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-4 flex w-fit items-center gap-1.5 rounded-full bg-[hsl(var(--primary)/0.1)] px-3 py-1.5 text-xs font-medium text-[hsl(var(--primary))] transition-all hover:bg-[hsl(var(--primary)/0.2)]"
+                        className="mt-4 flex w-fit items-center gap-1.5 rounded-full bg-[hsl(var(--custom-fifth)/0.1)] px-3 py-1.5 text-xs font-medium text-[hsl(var(--custom-fifth))] transition-all hover:bg-[hsl(var(--custom-fifth)/0.2)]"
                         >
                         <span>Visit Site</span>
                         <ExternalLink className="h-3 w-3" />
@@ -48,7 +48,7 @@ export function ExperienceCard({ experience, index }: ExperienceCardProps) {
                         {experience.technologies.map((tech) => (
                         <span
                             key={tech}
-                            className="rounded-full bg-[hsl(var(--primary)/0.1)] px-3 py-1.5 text-xs font-medium text-[hsl(var(--primary))]"
+                            className="rounded-full bg-[hsl(var(--custom-fourth)/0.1)] px-3 py-1.5 text-xs font-medium text-[hsl(var(--custom-fourth))]"
                             style={{ borderRadius: "var(--radius-sm)" }}
                         >
                             {tech}
@@ -61,23 +61,23 @@ export function ExperienceCard({ experience, index }: ExperienceCardProps) {
             {/* Bottom Row: Description and Image */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Description box */}
-                <div
-                    className="flex flex-col justify-start rounded-lg bg-gradient-to-br from-[hsl(var(--primary)/0.1)] via-[hsl(var(--secondary)/0.1)] to-[hsl(var(--accent)/0.1)] blur-xl p-6 text-[hsl(var(--primary-foreground))]"
-                    style={{
-                        borderRadius: "var(--radius)",
-                    }}
-                >
-                    <p className="text-sm leading-relaxed">{experience.description}</p>
-                    {experience.achievements.length > 0 && (
-                        <ul className="mt-4 space-y-2">
-                        {experience.achievements.map((achievement, i) => (
-                            <li key={i} className="flex items-start gap-2 text-xs opacity-90">
-                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-current" />
-                            <span>{achievement}</span>
-                            </li>
-                        ))}
-                        </ul>
-                    )}
+                <div className="relative w-full">
+                    {/* Blurry background gradient */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-[hsl(var(--custom-secondary)/0.1)] via-[hsl(var(--custom-third)/0.1)] to-[hsl(var(--custom-fifth)/0.1)] blur-xl" style={{ borderRadius: "var(--radius)" }}></div>
+                    {/* Content */}
+                    <div className="relative flex flex-col justify-start rounded-lg p-6 text-[hsl(var(--muted-foreground))]" style={{ borderRadius: "var(--radius)" }}>
+                        <p className="text-sm leading-relaxed">{experience.description}</p>
+                        {experience.achievements.length > 0 && (
+                            <ul className="mt-4 space-y-2">
+                            {experience.achievements.map((achievement, i) => (
+                                <li key={i} className="flex items-start gap-2 text-xs opacity-90">
+                                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-current" />
+                                <span>{achievement}</span>
+                                </li>
+                            ))}
+                            </ul>
+                        )}
+                    </div>
                 </div>
 
                 {/* Preview Image */}

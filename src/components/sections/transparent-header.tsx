@@ -12,7 +12,7 @@ export default function TransparentHeader({ sections, activeSection }: Transpare
   const progress = sections.length > 1 ? activeIndex / (sections.length - 1) : 0;
 
   return (
-    <header className="sticky top-0 z-[999] w-full bg-[hsl(var(--card)/0.5)] backdrop-blur-lg rounded-3xl">
+    <header className="sticky top-0 z-[999] w-full bg-gray/0.5)] backdrop-blur-lg rounded-3xl">
       <div className="container mx-auto px-4 py-4 max-w-5xl">
         <div className="flex justify-between items-center">
           <div className="text-[hsl(var(--foreground))] text-4xl font-bold">nostango</div>

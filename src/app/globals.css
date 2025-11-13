@@ -3,32 +3,32 @@
 
 :root {
   --background: 0 0% 0%;
-  --foreground: 220 14% 71%;
+  --foreground: 220 59% 76%;
 
-  --card: 220 13% 18%;
-  --card-foreground: 220 14% 71%;
+  --card: 276 29% 20%;
+  --card-foreground: 220 59% 76%;
  
-  --popover: 220 13% 18%;
-  --popover-foreground: 220 14% 71%;
+  --popover: 276 29% 20%;
+  --popover-foreground: 220 59% 76%;
  
-  --primary: 210 40% 98%;
-  --primary-foreground: 210 40% 9.8%;
+  --primary: 81 16% 59%;
+  --primary-foreground: 244 23% 12%;
  
-  --secondary: 220 13% 24%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 206 21% 34%;
+  --secondary-foreground: 220 59% 76%;
  
-  --muted: 220 9% 34%;
-  --muted-foreground: 220 14% 71%;
+  --muted: 206 21% 34%;
+  --muted-foreground: 220 59% 76%;
  
-  --accent: 220 13% 24%;
-  --accent-foreground: 210 40% 98%;
+  --accent: 81 16% 59%;
+  --accent-foreground: 244 23% 12%;
  
-  --destructive: 0 63% 31%;
+  --destructive: 0 100% 71%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 220 13% 24%;
-  --input: 220 13% 24%;
-  --ring: 210 40% 98%;
+  --border: 206 21% 34%;
+  --input: 276 29% 20%;
+  --ring: 81 16% 59%;
  
   --radius: 0.625rem;
   --radius-sm: calc(var(--radius) - 4px);
@@ -36,12 +36,24 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 
-  --bubble-1: 115 82 144;
-  --bubble-2: 215 182 244;
-  --bubble-3: 54 52 87;
-  --bubble-4: 158 183 229;
-  --bubble-5: 152 168 134;
-  --bubble-6: 152 168 134;
+  /* Original custom colors */
+  --color-primary: 275 26% 44%;
+  --color-primary-light: 274 76% 84%;
+  --color-secondary: 244 23% 28%;
+
+  /* New 5-color palette */
+  --custom-primary: 275 36% 52%;   /* Royal Purple */
+  --custom-secondary: 206 69% 62%;  /* Lighter Blue */
+  --custom-third: 207 44% 49%;      /* Metal Blue */
+  --custom-fourth: 160 100% 75%;     /* Lighter Green */
+  --custom-fifth: 45 66% 66%;       /* Pastel Gold */
+
+  --bubble-1: 275 26% 44%;
+  --bubble-2: 274 76% 84%;
+  --bubble-3: 244 23% 27%;
+  --bubble-4: 220 59% 76%;
+  --bubble-5: 81 16% 59%;
+  --bubble-6: 81 16% 59%;
 }
 
 body {
