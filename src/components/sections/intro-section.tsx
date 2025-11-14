@@ -1,3 +1,5 @@
+import { LiquidCard } from "@/components/ui/liquid-card";
+
 export function IntroSection() {
 return (
     <section className="min-h-screen flex items-center justify-center px-4 py-12 ">
@@ -22,17 +24,11 @@ return (
 
         {/* Row 2, Col 2: Description Box with Liquid Background */}
         <div className="h-full flex items-center">
-            <div className="relative w-full">
-            {/* Liquid gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--custom-primary)/0.1)] via-[hsl(var(--custom-third)/0.1)] to-[hsl(var(--custom-fourth)/0.1)] rounded-3xl blur-xl"></div>
-
-            {/* Main content box */}
-            <div className="relative bg-gradient-to-br from-[hsl(var(--card)/0.4)] to-[hsl(var(--card)/0.1)] backdrop-blur-md border border-[hsl(var(--border)/0.3)] rounded-3xl p-8 md:p-10">
-                <p className="text-base md:text-lg text-[hsl(var(--muted-foreground))] leading-relaxed">
-                I'm Alejandro Vega, and I am an engineer who builds full-stack web applications and develops practical, AI-driven solutions. I combine research experience with real-world engineering, creating tools that automate workflows, enhance data understanding, and bring intelligent systems to life.
+            <LiquidCard>
+                <p className="text-base md:text-3xl text-[hsl(var(--muted-foreground))] leading-relaxed">
+                In order to understand the world, you gotta break some things and fix some things. That's what I am about, I love 
                 </p>
-            </div>
-            </div>
+            </LiquidCard>
         </div>
         </div>
     </div>

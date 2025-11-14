@@ -19,7 +19,7 @@ interface WorkExperienceProps {
     experiences?: Experience[]
 }
 
-const defaultExperiences: Experience[] = [
+export const defaultExperiences: Experience[] = [
     {
         id: "1",
         company: "Valenzuela Hawaiian Kenpo",
@@ -59,7 +59,6 @@ const defaultExperiences: Experience[] = [
         "Selected among 1500 American citizens to teach English in public schools across France to students of all ages",
         technologies: [],
         achievements: [
-        "Selected among 1500 American citizens to teach English in public schools across France to students of all ages",
         "Prepared and taught 12 hours a week of lessons in English to classes of 12 students between 6th and 9th grade",
         ],
         previewImage: "/images/experience-images/tapif.jpg",

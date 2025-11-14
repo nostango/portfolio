@@ -7,9 +7,11 @@ import StickySection from '@/components/scroll-behavior/sticky-section';
 import TransparentHeader from "@/components/sections/transparent-header"
 import SocialBubbleGrid from '@/components/sections/social-bubble-grid';
 import { WorkExperience } from "@/components/sections/work-experience";
+import { WorkExperienceMobile } from "@/components/sections/work-experience-mobile";
 import { IntroSection } from "@/components/sections/intro-section"
+import { useIsMobile } from '@/lib/use-is-mobile';
 
-const sections = ['Home', 'Work', 'Socials'];
+const sections = ['Welcome!', 'Work Experience', 'Contact Me'];
 
 function Section({ children, id }: { children: React.ReactNode, id: string }) {
   const ref = useRef(null);
@@ -42,6 +44,7 @@ const useSectionContext = () => {
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState(sections[0]);
+  const isMobile = useIsMobile();
 
   return (
     <SectionContext.Provider value={{ activeSection, setActiveSection }}>
@@ -51,17 +54,17 @@ export default function Home() {
         ></BubbleBackground>
 
         <TransparentHeader sections={sections} activeSection={activeSection} />
-        <Section id="Home">
+        <Section id="Welcome!">
           <StickySection className="text-white flex flex-col items-center justify-center">
             <IntroSection />
           </StickySection>
         </Section>
 
-        <Section id="Work">
-          <WorkExperience />
+        <Section id="Work Experience">
+          {isMobile ? <WorkExperienceMobile /> : <WorkExperience />}
         </Section>
 
-        <Section id="Socials">
+        <Section id="Contact Me">
           <StickySection className="bg-transparent items-center">
             <SocialBubbleGrid />
           </StickySection>
