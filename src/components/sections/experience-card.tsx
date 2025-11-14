@@ -2,6 +2,7 @@
 
 import { ExternalLink } from "lucide-react"
 import type { Experience } from "../sections/work-experience"
+import { LiquidCard } from "@/components/ui/liquid-card";
 import { cn } from "@/lib/utils"
 
 interface ExperienceCardProps {
@@ -24,22 +25,13 @@ export function ExperienceCard({ experience, index }: ExperienceCardProps) {
             {/* Top Row: Title and Tech Stack */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Title Section */}
-                <div className="flex flex-col justify-start">
-                    <h3 className="text-2xl font-bold leading-tight text-[hsl(var(--custom-primary))]">{experience.role}</h3>
-                    <p className="mt-1 text-lg text-[hsl(var(--muted-foreground))]">{experience.company}</p>
-                    <span className="mt-2 text-sm text-[hsl(var(--muted-foreground))]">{experience.period}</span>
-                    {experience.website && (
-                        <a
-                        href={experience.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 flex w-fit items-center gap-1.5 rounded-full bg-[hsl(var(--custom-fifth)/0.1)] px-3 py-1.5 text-xs font-medium text-[hsl(var(--custom-fifth))] transition-all hover:bg-[hsl(var(--custom-fifth)/0.2)]"
-                        >
-                        <span>Visit Site</span>
-                        <ExternalLink className="h-3 w-3" />
-                        </a>
-                    )}
-                </div>
+                <LiquidCard>
+                    <div className="flex flex-col justify-start">
+                        <h3 className="text-2xl font-bold leading-tight">{experience.role}</h3>
+                        <p className="mt-1 text-lg">{experience.company}</p>
+                        <span className="mt-2 text-sm">{experience.period}</span>
+                    </div>
+                </LiquidCard>
 
                 {/* Technology Stack Section */}
                 <div className="flex flex-col justify-start">
