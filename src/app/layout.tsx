@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GridBackground } from "@/components/scroll-behavior/grid-background"
+// import { GridBackground } from "@/components/scroll-behavior/grid-background"
 import { GridFade } from "@/components/scroll-behavior/grid-fade"
 import "./globals.css";
 
@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GridBackground />
+        {/* <GridBackground /> */}
         <GridFade />
         {children}
       </body>
