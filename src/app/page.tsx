@@ -27,7 +27,6 @@ function Section({ children, id }: { children: React.ReactNode, id: string }) {
   return <section ref={ref}>{children}</section>;
 }
 
-// A simple context to pass activeSection state down
 const SectionContext = React.createContext<{
   activeSection: string;
   setActiveSection: (id: string) => void;
@@ -55,9 +54,9 @@ export default function Home() {
 
         <TransparentHeader sections={sections} activeSection={activeSection} />
         <Section id="Welcome!">
-          <StickySection className="text-white flex flex-col items-center justify-center">
+          <div className="text-white flex flex-col items-center justify-center">
             <IntroSection />
-          </StickySection>
+          </div>
         </Section>
 
         <Section id="Work Experience">
@@ -65,9 +64,9 @@ export default function Home() {
         </Section>
 
         <Section id="Contact Me">
-          <StickySection className="bg-transparent items-center">
+          <div className="bg-transparent items-center">
             <SocialBubbleGrid />
-          </StickySection>
+          </div>
         </Section>
       </main>
     </SectionContext.Provider>
