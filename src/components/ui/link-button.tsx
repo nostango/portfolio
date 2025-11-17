@@ -26,7 +26,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ href, label }) => {
       title={label}
       className="
         flex items-center justify-center
-        w-12 h-12 bg-[hsl(var(--secondary))]
+        w-12 h-12 bg-gradient-to-br from-[hsl(var(--custom-primary)/0.1)] via-[hsl(var(--custom-third)/0.1)] to-[hsl(var(--custom-fourth)/0.1)]
         rounded-full
         transition-all duration-300
         hover:bg-[hsl(var(--muted))] hover:scale-110 hover:shadow-lg

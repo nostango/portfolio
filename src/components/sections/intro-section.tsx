@@ -25,8 +25,8 @@ return (
         {/* Row 2, Col 2: Description Box with Liquid Background */}
         <div className="h-full flex items-center">
             <LiquidCard>
-                <p className="text-base md:text-3xl text-[hsl(var(--muted-foreground))] leading-relaxed">
-                In order to understand the world, you gotta break some things and fix some things. That's what I am about, I love 
+                <p className="text-base md:text-xl text-[hsl(var(--muted-foreground))] leading-relaxed">
+                In order to understand the world, you gotta break some things and fix some things. That's what I am about, I love understanding how everyday things work, and make them into whatever the imagination can dream up.
                 </p>
             </LiquidCard>
         </div>
